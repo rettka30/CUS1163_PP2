@@ -14,7 +14,7 @@ public class ConsumerRunnable implements Runnable {
   public void run() {
       try {
          for (int i = 1; i <= count; i++) {
-               System.out.println(queue.remove());
+               queue.remove();
                Thread.sleep(DELAY);
          }
       }

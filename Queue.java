@@ -47,6 +47,8 @@ public class Queue {
             head = node;
          }
          size++;
+         System.out.print("Adding to Queue: " + data);
+         System.out.println(", and size is " + size);
          sufficientSizeCondition.signalAll();
       } finally {
          sizeLock.unlock();
@@ -65,6 +67,8 @@ public class Queue {
             tail = null;
          }
          size--;
+         System.out.print("Removing from Queue: " + data);
+         System.out.println(", and size is " + size);
          sufficientSizeCondition.signalAll();
          return data;
       } finally {
